@@ -17,20 +17,20 @@ data class Pet(
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var pet: Pet // Define your Pet data class
+    private lateinit var pet: Pet
 
-    private lateinit var petImageView: ImageView // Replace with your image view ID (e.g., Main_Image)
-    private lateinit var feedButton: Button    // Replace with your button ID (e.g., Feed_Button)
-    private lateinit var cleanButton: Button  // Replace with your button ID (e.g., Clean_Button)
-    private lateinit var playButton: Button    // Replace with your button ID (e.g., Play_Button)
-    private lateinit var hungerText: TextView  // Replace with your text view ID (e.g., hunger_text)
-    private lateinit var cleanlinessText: TextView // Replace with your text view ID (e.g., cleanliness_text)
-    private lateinit var healthText: TextView  // Replace with your text view ID (e.g., health_text)
+    private lateinit var petImageView: ImageView
+    private lateinit var feedButton: Button
+    private lateinit var cleanButton: Button
+    private lateinit var playButton: Button
+    private lateinit var hungerText: TextView
+    private lateinit var cleanlinessText: TextView
+    private lateinit var healthText: TextView
 
     private val imageResources = mapOf(
-        "feed" to R.drawable.eating, // Replace with your resource ID for eating image
-        "clean" to R.drawable.washing, // Replace with your resource ID for cleaning image
-        "play" to R.drawable.health  // Replace with your resource ID for playing image
+        "feed" to R.drawable.eating,
+        "clean" to R.drawable.washing,
+        "play" to R.drawable.health
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,14 +38,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         // Initialize pet data and image views
-        pet = Pet("Fluffy", R.drawable.playing, 50, 50, 50) // Replace with your details
-        petImageView = findViewById(R.id.Main_Image)  // Replace with your image view ID
-        feedButton = findViewById(R.id.Feed_Button)    // Replace with your button ID
-        cleanButton = findViewById(R.id.Clean_Button)  // Replace with your button ID
-        playButton = findViewById(R.id.Play_Button)    // Replace with your button ID
-        hungerText = findViewById(R.id.hunger_text)    // Replace with your text view ID
-        cleanlinessText = findViewById(R.id.cleanliness_text) // Replace with your text view ID
-        healthText = findViewById(R.id.health_text)    // Replace with your text view ID
+        pet = Pet("Fluffy", R.drawable.playing, 50, 50, 50)
+        petImageView = findViewById(R.id.Main_Image)
+        feedButton = findViewById(R.id.Feed_Button)
+        cleanButton = findViewById(R.id.Clean_Button)
+        playButton = findViewById(R.id.Play_Button)
+        hungerText = findViewById(R.id.hunger_text)
+        cleanlinessText = findViewById(R.id.cleanliness_text)
+        healthText = findViewById(R.id.health_text)
 
         // Button click listeners
         feedButton.setOnClickListener {
